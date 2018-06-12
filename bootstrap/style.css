@@ -1,0 +1,15 @@
+nav{
+    margin: 10px 100px;
+}
+
+nav img{
+    width: 200px;
+    float: left;
+}
+
+header{
+    background-image: url(img/tutor.jpg) ;
+    background-size: cover;
+    height: 600px;  
+
+}
