@@ -1,5 +1,5 @@
 nav{
-    margin: 10px 100px;
+    margin: 0px 100px;
 }
 
 nav img{
@@ -10,7 +10,7 @@ nav img{
 header{
     background-image: url(img/tutor.jpg) ;
     background-size: cover;
-    height: 600px;  
+    height: 570px;  
 
 }
 
@@ -21,7 +21,26 @@ header{
 }
 
 .row .card{
-    width: 500px;
+    width: 550px;
      background:rgba(255,255,255, 0.6);
     border: none;
+    color: darkblue;
+    text-align: center;    
+}
+
+
+.card-text li{
+      float:left;
+    list-style: none;
+}
+
+
+.card-btn{
+    margin-left: 21%;
+    margin-right: 21%;
+}
+
+.detail{
+    padding: 100px;
+    background-color: #0288D1;
 }
