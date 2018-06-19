@@ -1,3 +1,5 @@
+/* START */
+
 nav{
     margin: 0px 100px;
 }
@@ -58,4 +60,26 @@ header{
 .ending .card{
     border: none;
     background-color: #1A237E;
+}
+
+/* LOGIN */
+
+.text-center {
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+}
+
+.from-login{
+    width: 446px;
+    margin: auto;
+}
+
+.from-login button{
+    
+    font-size: 20px;
+    
 }
