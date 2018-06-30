@@ -1,7 +1,13 @@
-/* START */
+/* LandingPage */
+
+.sticky-top{
+    
+}
 
 nav{
-    margin: 0px 100px;
+    
+    background-color: white;
+    margin
 }
 
 nav img{
@@ -55,17 +61,41 @@ header{
     height: 430px;
 }
 
-.ending .card-deck{
-    background-color: #1A237E;
+footer .card-deck{
+    background-color: #2b3340;
     color: white;
+    margin: 0px 50px;
+    margin-bottom: 50px;
 }
 
-.ending .card{
+footer .card{
     border: none;
-    background-color: #1A237E;
+    background-color: #2b3340;
 }
 
-/* LOGIN */
+footer .card-body p a{
+    color: white;
+    font-size: 14px;
+}
+
+card-title h5{
+    color: darkgray;
+}
+
+footer{
+    background-color: #2b3340;
+    padding: 50px;
+    
+}
+
+footer .card-body img{
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    background-color: darkgray;
+}
+
+/* GuruLogin */
 
 .text-center {
     text-align: center !important;
@@ -73,8 +103,8 @@ header{
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    
 }
+
 
 .from-login{
     width: 446px;
@@ -88,7 +118,8 @@ header{
     
 }
 
-/* MakeLowongan */
+/* LowonganBuat */
 label{
     font-size: 15px;
 }
+
