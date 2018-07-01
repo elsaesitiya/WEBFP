@@ -18,7 +18,7 @@ nav img{
 header{
     background-image: url(img/tutor.jpg) ;
     background-size: cover;
-    height: 570px;  
+    height: 650px;  
 
 }
 
@@ -52,13 +52,23 @@ header{
 
 
 .detail{
-    padding: 100px 200px;
-    background-color: #0288D1;
+    padding: 50px 200px;
+    padding-bottom: 0px;
+    background-color: white;
 }
 
 .detail .card{
     margin: 0px 30px;
-    height: 430px;
+    height: 350px;
+}
+
+.detail .card p{
+    font-size: 13px;
+    text-align: center;
+}
+
+.detail .card h5{
+    text-align: center;
 }
 
 footer .card-deck{
