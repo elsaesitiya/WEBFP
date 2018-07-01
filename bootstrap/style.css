@@ -95,6 +95,7 @@ card-title h5{
 footer{
     background-color: #2b3340;
     padding: 50px;
+    padding-bottom: 10px;
     
 }
 
@@ -126,6 +127,10 @@ footer .card-body img{
     
     font-size: 20px;
     
+}
+
+.grubbutton button{
+    padding: 
 }
 
 /* LowonganBuat */

@@ -12,29 +12,42 @@
   </head>
   <body class="text-center" style="background: #F0F0F0;">
       <div class="from-login shadow-sm p-5 mb- bg-white rounded">
-        <img src="img/fl.png" style="width: 200px; padding: 10px;">
-          
-        <h4 style="padding: 30px; margin: 0px"><b>Selamat Datang Kembali</b></h4>
-          
-        <button type="button" class="btn btn-primary" style="width: 350px; height: 50px; background: linear-gradient(to bottom,#3b5998 0,#344e86 100%);"><img src="img/fb.png" style="width: 20px; margin-right: 10px;"><b>Login Dengan Facebook</b></button>
-          
-        <p style="padding: 20px; margin: 0px; font-size: 15px"><b>ATAU</b></p>
-          
-          
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email atau Nama Pengguna"   style="width:350px; margin-bottom: 20px;">
+        <img src="img/fl.png" style="width: 200px; padding: 10px; margin-bottom: 20px;">
+        <ul class="nav nav-tabs" >
+          <li class="nav-item" style="width: 50%">
+            <a class="nav-link active" href="#">Masuk</a>
+          </li>
+          <li class="nav-item" style="width: 50%">
+            <a class="nav-link" href="#">Regristrasi</a>
+          </li>
+        </ul>
         
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Kata Sandi" style="width: 350px;">
+        <form class="GuruLogin" style=" margin: 40px 0px;">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email atau Nama Pengguna"   style="width:350px; margin-bottom: 20px;">
+
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Kata Sandi" style="width: 350px;">
+
+            <div class="custom-control custom-checkbox" style="float: left">
+              <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+              <label class="custom-control-label" for="customCheckDisabled">Ingat saya</label>
+            </div>
+
+            <div style="float: right; font-size: 15px;">
+                <a href="#">Lupa Kata Sandi?</a>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin: 20px 0px 0px 0px; width: 350px; height: 50px;"><b>Login</b></button>
+         
+        </form>
+          <hr>
+          <p style="padding: 20px; margin: 0px; font-size: 15px"><b>ATAU</b></p>
           
-       <div class="custom-control custom-checkbox" style="float: left">
-          <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
-          <label class="custom-control-label" for="customCheckDisabled">Ingat saya</label>
+        <div class="account" style="width: 100%; margin: 20px 0px">
+            <button type="button" class="btn btn-secondary" style="width: 40%; margin-right: 5px; background-color: #475993; border: none">Facebook</button>
+            <button type="button" class="btn btn-secondary" style="width: 40%; margin-left: 5px; background-color: #DC4E41; border: none">Google</button>  
         </div>
-          
-        <div style="float: right; font-size: 15px;">
-            <a href="#">Lupa Kata Sandi?</a>
-        </div>
-         <button type="submit" class="btn btn-primary" style="margin: 30px 0px; width: 350px; height: 50px;"><b>Login</b></button>
+              
         <hr>
+         
         <p style="font-size: 15px">Belum punya akun? <a href="#">Daftar</a></p>
 
       </div>
