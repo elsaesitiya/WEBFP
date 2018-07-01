@@ -1,143 +1,154 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <title>Mudzelty</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
-  <title>Mudzelty</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!-- Akhir Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/main-style.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/ihover.min.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome/web-fonts-with-css/css/fontawesome-all.css">
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+  
 </head>
 <body>
-  <nav class="navbar">
-    <img class="navbar-brand" src="img/fl.png">
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Masuk</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Mendaftar</a>
-      </li>
-      <li class="nav-item">
-        <button type="button" class="btn btn-primary"><b>Buat Lowongan</b></button>
-      </li>
-    </ul> 
+  <nav class="navbar navbar-expand-lg text-white fixed-top" >
+    <img src="img/fl.png" class="logo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" style="margin-left: 700px;">
+        <li class="nav-item active">
+          <a class="nav-link" href="#/!">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tours
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown" >
+            <a class="dropdown-item" href="#!waterfall">Water Fall</a>
+            <a class="dropdown-item" href="#!temple">Temple</a>
+            <a class="dropdown-item" href="#!beach">Beach</a>
+            <a class="dropdown-item" href="#!hill">Hill</a>
+            <a class="dropdown-item" href="#!pine">Pine Forest</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#!event">Events <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#!foods">Foods <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#!Galery">Galery <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#!about">About Us <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
   </nav>
-  <header  style="margin: 0px; padding: 0px">
+
+  <div class="container-fluid"">
     <div class="row">
-      <div class="col-sm-6">
-        <div class="card ">
-          <div class="card-body ">
-            <h2 class="card-title"><b>Tutor terbaik ada di sini</b></h2>
-            <p class="card-text">
-              <a>Banyak lowongan tutor, Tutor terbaik dibidangnya, Berkualitas</a> 
-            </p>
-            <div class="card-btn">
-              <a href="#" class="btn btn-warning" style=""><b>Mencari Tutor</b></a>
-              <a href="#" class="btn btn-outline-secondary" style="float: right"><b>Menjadi Tutor</b></a>
+      <div class="col-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"/>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"/>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item-active">
+              <img src="img/tutor.jpg" class="d-block w-100" alt="First slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h2 class="marbot">Zulfakar Muhammad</h2>
+                <p></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/tutor2.jpg" class="d-block w-100" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h2 class="marbot">Zulfakar Muhammad</h2>
+                <p></p>
+              </div>
             </div>
           </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
-  </header>
-<!--   <div class="detail">
-    <div class="card-deck">
+    
+  </div>
 
-      <div class="card">
-        <img class="card-img-top" src="img/tutor.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="card-title">Profil Anda</h3>
-          <p class="card-text">Isikan profil anda selengkap dan semenarik mungkin, pengalaman yang anda punya serta berapa gaji yang anda inginkan jika anda menerima lowongan kerja sesuai bidang anda.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="img/tutor.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="card-title">Indentitas Profesional</h3>
-          <p class="card-text">Anda memiliki skil dan profesional dalam bidang tertentu, isikan supaya menjadi daya tarik dan jual anda.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="img/tutor.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="card-title">Membuat Lowongan</h3>
-          <p class="card-text">Disini anda dapat membuka dan mencari tutor sesuai spesifikasi yang anda inginkan dan dengan gaji sesuai kantong anda</p>
-        </div>
-      </div>
+
+
+  <section class="footer">
+    <div class="row" style="border-bottom: 1px solid #2F2F2F; margin-left: 10px;" ng-controller="cuacaCtrl">
+
+
+      <div class="col-6 martop"">
+        <h3><b>Our Office</b></h3>
+        <div id="mapdetail"></div>
+        <script>
+          function initMap() {
+            var loc = {lat: -7.756414, lng:110.406653};
+            var map = new google.maps.Map(document.getElementById('mapdetail'), {
+              zoom: 17,
+              center: loc
+            });
+            var marker = new google.maps.Marker({
+              position: loc,
+              map: map,
+              label:'Zulfakar'
+
+            });
+          }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYTyY2QP4RTUvQpOkBso9Qs8wX3d1Swkg&callback=initMap">
+      </script>
     </div>
-  </div> 
-</div>-->
-
-<div>
-  <div class="ending" style="padding: 50px; background-color: #1A237E">
-
-    <div class="card-deck">
-
-      <div class="card">
-        <img class="card-img-top" src="img/tutor.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="card-title">Profil Anda</h3>
-          <p class="card-text">Isikan profil anda selengkap dan semenarik mungkin, pengalaman yang anda punya serta berapa gaji yang anda inginkan jika anda menerima lowongan kerja sesuai bidang anda.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card-img-top" src="img/tutor.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="card-title">Profil Anda</h3>
-          <p class="card-text">Isikan profil anda selengkap dan semenarik mungkin, pengalaman yang anda punya serta berapa gaji yang anda inginkan jika anda menerima lowongan kerja sesuai bidang anda.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img class="card-img-top" src="img/tutor.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="card-title">Profil Anda</h3>
-          <p class="card-text">Isikan profil anda selengkap dan semenarik mungkin, pengalaman yang anda punya serta berapa gaji yang anda inginkan jika anda menerima lowongan kerja sesuai bidang anda.</p>
-        </div>
-      </div>
-
+    <div class="col-6 martop">
+      <h3><b>Follow Us</b></h3>
+      <ul class="a">
+        <li><h2><a href="http://www.facebook.com/muzakar11" target="_blank"><i class="fab fa-facebook"></i></a></h2></li>
+        <li><h2><a href="http://www.instagram.com/zulfakar.elzaf" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></h2></li>
+        <li><h2><a href="http://www.gitlab.com/zulfakar11" target="_blank"><i class="fab fa-gitlab" ></i></a></h2></li>
+        <li><h2><a href="http://www.github.com/zulfakarelzaf" target="_blank"><i class="fab fa-github"></i></a></h2></li>
+        <li><h2><a href="https://www.youtube.com/channel/UCe_hvHhhPOiIbCyUxbZu_fg" target="_blank"><i class="fab fa-youtube"></i></a></h2></li>
+      </ul>
     </div>
   </div>
-</div>
-<!-- ori -->
-<div>
-  <div class="ending" style="padding: 50px; background-color: #1A237E">
-
-    <div class="card-deck">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Zulfakar</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Zulfakar</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-
-        </div>
-      </div>
-
-      <div class="card" >
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        </div>
-      </div>
+  <div class="row footerauth">
+    <div class="col-12 text-center">
+      <p>2018 Guru Les - All Rights Reserved </p>
     </div>
   </div>
-</div>
+</section>
 
-
-<!-- Optional JavaScript
-jQuery first, then Popper.js, then Bootstrap JS
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
 </body>
 </html>

@@ -1,0 +1,397 @@
+.marbot{
+	margin-bottom: 40px;
+}
+.parallax {
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+.merah{
+	background-color: black;
+	opacity: 0.8;
+}
+
+body{
+	margin: 0px;
+	font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.carousel .carousel-inner{
+	width: 100%;
+	height: 650px;
+}
+.container-fluid{
+	width: 100%;
+	padding: 0px;
+    margin: 0px;
+}
+ul.a {list-style-type: none;
+}
+ul.a li img{
+	height: 70px;
+	margin-top: 30px;
+}
+a:hover{
+	color: #123456;
+	text-decoration: none;
+}
+a{
+	/*color: white;*/
+	font-style: bold;
+}
+.margin-content{
+	margin-right: 100px;
+	margin-left: 100px;
+	padding-left: 25px;
+	margin-top: 50px;
+}
+.resize{
+	height: 300px;
+	width: 300px;
+}
+.margin-foods{
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+p{
+	text-align: justify-all;
+
+}
+#todo{
+	width: 100%;
+	height: 500px; 
+	margin-top: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.footer{
+	width: 100%;
+	margin-top: 50px;
+	color: white;
+	background-color: #2b3340;
+}
+.footerauth{
+	max-width: 100%;
+	background-color: #2b3340;
+	margin-top: 20px;
+	color: white;
+}
+.footer ul li{
+	display: inline;
+	list-style-type: circle;
+}
+.footer h3{
+	text-align: left;
+}
+.footer p{
+	text-align: justify-all;
+}
+.martop{
+	margin-top: 20px;
+}
+.gambar-isi{
+height: 350px;
+border-radius: 15px;
+margin:0 auto;
+}
+.odd{
+	background-color: lightgrey;
+}
+#map {
+        height: 400px;
+        width: 100%;
+       }
+#mapdetail {
+		height: 300px;
+		width: 100%;
+}
+.imgeff{
+	position: 0 -1000px;
+}
+.coba{
+	margin-left: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Untuk halaman about dimulai */
+/* 1. About body - Container */
+.about-body
+{
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.about-container {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  -moz-transition : all 0.3s ease-in-out;
+  -webkit-transition : all 0.3s ease-in-out;
+}
+
+@media (min-width: 992px)
+{
+	.about-container
+	{
+		min-height: 580px;
+	}
+}
+
+/*2. Body dari about us*/
+.about-body-datapeople
+{
+	width: 99%;
+	overflow-y: scroll;
+	margin: 0 auto;
+	border-top: 6px solid #111;
+  	-webkit-transition: all 0.6s ease-in-out;
+  	-moz-transition: all 0.6s ease-in-out;
+  	transition: all 0.6s ease-in-out;
+  	border-radius: 5px;
+  	-moz-border-radius: 0px;
+  	-webkit-border-radius: 0px;
+  	-webkit-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+  	-moz-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+  	box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+  	border-bottom: 15px solid #f4f4f4;
+  	opacity: 0;
+}
+
+@media (min-width:992px) {
+  .about-body-datapeople {
+    position: absolute;
+    margin-top: 30px;
+    left: 27%;
+    height: 400px;
+    width: 50%;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-body-datapeople {
+    margin-top: 70px;
+  }
+}
+
+.about-body-datateam
+{
+	width: 99%;
+	overflow-y: scroll;
+	margin: 0 auto;
+	border-top: 6px solid #111;
+  	-webkit-transition: all 0.6s ease-in-out;
+  	-moz-transition: all 0.6s ease-in-out;
+  	transition: all 0.6s ease-in-out;
+  	border-radius: 5px;
+  	-moz-border-radius: 0px;
+  	-webkit-border-radius: 0px;
+  	-webkit-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+  	-moz-box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+  	box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.46);
+  	border-bottom: 15px solid #f4f4f4;
+  	opacity: 0;
+}
+
+@media (min-width:992px) {
+  .about-body-datateam {
+    position: absolute;
+    margin-top: 30px;
+    left: 31%;
+    height: 460px;
+    width: 40%;
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-body-datateam {
+    margin-top: 70px;
+  }
+}
+
+.aboutactive
+{
+	opacity: 1!important;
+}
+
+/* About and its data */
+/* 1. Photo */
+.about-profile-picture
+{
+	width: 250px;
+	height: 270px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.about-profile-picture img
+{
+	width: 100%;
+	border-radius: 100%;
+	-moz-border-radius : 100%;
+	-webkit-border-radius : 100%;
+	border: 8px solid #ddd;
+	transition: all 0.6s ease-in-out;
+	-moz-transition : all 0.6s ease-in-out;
+	-webkit-transition : all 0.6s ease-in-out;
+	position: absolute;
+}
+
+.about-profile-picture-person
+{
+	width: 250px;
+	height: 330px;
+	position: relative;
+	overflow: hidden;
+}
+
+.about-profile-picture-person img
+{
+	margin-top : 20px;
+	width: 100%;
+	border-radius: 100%;
+	-moz-border-radius : 100%;
+	-webkit-border-radius : 100%;
+	border: 8px solid #ddd;
+	transition: all 0.6s ease-in-out;
+	-moz-transition : all 0.6s ease-in-out;
+	-webkit-transition : all 0.6s ease-in-out;
+	position: absolute;
+	
+}
+
+/* 2. data*/
+.dataPeople
+{
+	margin-top: 40px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+.people h1
+{
+	padding-top: 40px;
+	font-weight: bold;
+  	margin-top: 0;
+  	font-size: 36px;
+  	letter-spacing: -2px;
+  	margin-bottom: 8px;
+  	color: #021533;
+}
+
+.people h2
+{
+	margin-top: 0;
+  	font-size: 18px;
+  	font-weight: bold;
+  	margin-bottom: 20px;
+}
+
+.color1
+{	
+  	color: red;
+}
+
+.dataTeam
+{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}
+
+.team h1
+{
+	font-weight: bold;
+  	margin-top: 0;
+  	font-size: 36px;
+  	letter-spacing: -2px;
+  	margin-bottom: 8px;
+  	color: #021533;
+}
+
+.team h2
+{
+	margin-top: 0;
+  	font-size: 18px;
+  	font-weight: bold;
+  	margin-bottom: 8px;
+}
+
+.team-profile-text
+{
+	margin-bottom: 8px;
+}
+
+
+.team-profile-text p
+{
+	font-size: 15px;
+}
+
+
+
+
+
+
+/*Next and previous button*/
+.btnNextPrvs
+{
+	align-items: center;
+	position: relative;
+	text-align: center;
+}
+.btnNextPrvs a
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%); 
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 8px 16px;
+}
+
+.btnNextPrvs a:hover
+{
+	background-color: #ddd;
+	color: black;
+}
+
+.btnNextPrvs .previous
+{
+	background-color: #f1f1f1;
+	color: black;
+}
+
+.btnNextPrvs .next {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.btnNextPrvs .round {
+    border-radius: 50%;
+}
