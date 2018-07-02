@@ -138,3 +138,8 @@ label{
     font-size: 15px;
 }
 
+/*map*/
+#mapdetail {
+        height: 300px;
+        width: 100%;
+}
