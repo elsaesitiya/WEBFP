@@ -1,61 +1,57 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <title>Type Account</title>
-</head>
-<body class="text-center" style="background: #F0F0F0;">
-  <div style="margin: 70px auto; height: 100%">
-    <div class="from-login shadow p-5 mb- bg-white rounded">
-      <img src="img/fl.png" style="width: 200px; padding: 10px; margin-bottom: 20px;">
-      <h4>Mendaftar sebagai?</h4>
-      <button type="button" class="btn btn-outline-primary" onclick="accountTypeGL()" style="width: 300px; height: 100px; margin: 10px;">
-        <div style=" float:left; margin: auto;">
-          <img src="img/board.svg" style="width: 90px;">
-        </div>
-        <div class="" style="margin: 30px auto; font-size: 18px;">
-          Menjadi Guru Les
-        </div>
-      </button> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Type Account</title>
+  </head>
+  <body class="text-center" style="background: #F0F0F0;">
+      <div style="margin: 70px auto; height: 100%">
+        <div class="from-login shadow p-5 mb- bg-white rounded">
+        <img src="img/fl.png" style="width: 200px; padding: 10px; margin-bottom: 20px;">
+          <h4>Anda masuk sebagai?</h4>
+          <button type="button" class="btn btn-outline-primary" onclick="createAccount()" style="width: 300px; height: 100px; margin: 10px;">
+            <div style=" float:left; margin: auto;">
+            <img src="img/board.svg" style="width: 90px;">
+            </div>
+            <div class="" style="margin: 30px auto; font-size: 18px;">
+                Menjadi Guru Les
+            </div>
+          </button> 
+            <script type="text/javascript">
+          function createAccount() {
+          window.location.href="GuruLogin.html";
+              }
+            </script>
+            
+          <button type="button" onclick="createAccount()" class="btn btn-outline-primary" style="width: 300px; height: 100px; margin: 10px;">
+            <div style=" float:left; margin: auto;">
+            <img src="img/site.svg" style="width: 90px;">
+            </div>
+            <div class="" style="margin: 30px auto; font-size: 18px;">
+                Mencari Guru Les
+            </div>
+          </button> 
+            <script type="text/javascript">
+          function createAccount() {
+          window.location.href="LowonganRegristrasi.html";
+              }
+            </script>
 
-      <button type="button" class="btn btn-outline-primary" onclick="accountTypePG()" style="width: 300px; height: 100px; margin: 10px;">
-        <div style=" float:left; margin: auto;">
-          <img src="img/site.svg" style="width: 90px;">
-        </div>
-        <div class="" style="margin: 30px auto; font-size: 18px;">
-          Mencari Guru Les
-        </div>
-      </button>  
+      </div>
 
-    </div>
-
-
-  </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-  <!-- accountType GL -->
-  <script type="text/javascript">
-    function accountTypeGL() {
-      window.location.href="GuruSkilList.html";
-
-    }
-  </script>
-  <!-- accountType PG -->
-  <script type="text/javascript">
-    function accountTypePG() {
-        window.location.href="BuatLowongan.html";
-      }
-    </script>
+      
+      </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>
-  </html>
+</html>
