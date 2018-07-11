@@ -25,17 +25,13 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!-- Angular -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> -->
-  <style>
-  nav li a{
-    color: #2b3340;
-
-  }
-  nav li{
-    margin: 0px 5px;
-  }
+<style>
+nav li a{
+  color: #2b3340;
+}
+nav li{
+  margin: 0px 5px;
+}
 </style>
 
 </head>
@@ -177,6 +173,7 @@
    <div style="width: 63%; height: 650px; float: right">
     <div class="shadow-sm mb-5 bg-white rounded" style="margin: 50px 0px; height: 550px; padding: 25px">
       <h2 id="usernameHere"></h2>
+
     </div>
   </div>
 </div>
@@ -240,12 +237,12 @@
 <!-- Database -->
 <script type="text/javascript">
   var database= firebase.database();
-  var starCountRef = firebase.database().ref('/user');
+  var starCountRef = firebase.database().ref('/lowongan');
   var namalah 
   starCountRef.on('value', function(snapshot) {
     var allName = "";
     snapshot.forEach(function(childSnapshot) {
-      allName += childSnapshot.child('name').val() + "<br>";
+      allName += childSnapshot.child('nama').val() + "<br>";
     });
     document.getElementById('usernameHere').innerHTML = allName;
     console.log(allName);
