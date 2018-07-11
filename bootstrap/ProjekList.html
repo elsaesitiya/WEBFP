@@ -8,9 +8,10 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <title>Lowongan Mengajar</title>
   <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
   // Initialize Firebase
   var config = {
@@ -22,160 +23,202 @@
     messagingSenderId: "400442081546"
   };
   firebase.initializeApp(config);
-</script>
+</script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <style>
-nav li a{
-  color: #2b3340;
+nav li a
+{  color: #2b3340;
 }
 nav li{
   margin: 0px 5px;
 }
 </style>
 
+<!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> 
+
+<script>
+ var app = angular.module('projectList', ["ngRoute"]);
+ app.config(function($routeProvider){
+  $routeProvider
+  .when("/", {
+    templateUrl : "project_list_item.htm",
+    controller  : "pList"
+  })
+});
+
+ app.controller('pList', function($scope, $http){
+  $http.get('https://api.myjson.com/bins/1dkeae')
+  .then(function(result){
+    $scope.datas = result.data.data;
+  });
+});
+</script>
+
 </head>
 <body>
-  <nav class="navbar fixed-top shadow-sm mb-5 bg-white rounded" style="padding: 10px 100px;">
+  <nav class="navbar sticky-top shadow-sm mb- bg-white rounded" style="padding: 10px 100px; margin-bottom: 0px;">
     <img src="img/fl.png">
     <ul class="nav justify-content-end">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Bahasa
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Indonesia</a>
           <a class="dropdown-item" href="#">English</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#">Projek Log</a>
+        <a class="nav-link active" href="ProjekLog.html">Projek Log</a>
       </li>
-      <li class="nav-item">
-        <img src="img/notification.svg" style="width: 35px; padding: 5px">
-      </li>
-      <li class="nav-item">
-        <img src="img/user.svg" style="width: 35px; padding: 5px">
-      </li>
-    </ul> 
-  </nav>
+      <li class="nav-item dropdown">
+        <a class="nav-link btn-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <img src="img/notification.svg" style="width: 22px;">
+       </a>
+       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">Indonesia</a>
+        <a class="dropdown-item" href="#">English</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link btn-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       <img src="img/user.svg" style="width: 25px; padding:px">
+     </a>
+     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+      <a class="dropdown-item" href="#">Masuk sebagai elsaesitiya</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Profil</a>
+      <a class="dropdown-item" href="#">Projek Log</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Help</a>
+      <a class="dropdown-item" href="#">Pengaturan</a>
+      <a class="dropdown-item" href="#">Keluar</a>
+    </div>
+  </li>
+</ul> 
+</nav>
 
 
 
 
 
-  <div class="detail" style="width: 100%; height: 650px; padding: 0px 70px; background-color: #F0F0F0; margin-top: 65px">
-    <div class="" style="width: 35%; height: 650px; float: left">
-      <div class="shadow-sm mb-5 bg-white rounded" style="margin: 50px 0px; height: 550px; padding: 25px">
-
-        <h5>Filter Lowongan</h5>
-        <hr>
-        <h6>Bidang Pendidikan yang Diajar</h6>
-        <div style="margin-top: 10px">
-          <div style="width: 50%; float: left">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox1" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox1">Bahasa Inggris</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox2" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox2">Bahasa Indonesia </label>
-            </div> 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox3" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox3">Matematika</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox4" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox4">Fisika </label>
-            </div> 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox5" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox5">Biologi</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox6" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox6">Kimia </label>
-            </div> 
-          </div>
-
-          <div style="width: 40%; float: left">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox7" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox7">Sosiologi</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox8">Geografi </label>
-            </div> 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox9" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customRadio9">Ekonomi</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox10" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox10">Sejarah</label>
-            </div> 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox11" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox11">Musik</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox12" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox12">Olahraga</label>
-            </div>    
-          </div>
-        </div>
-
-
-        <div style="float: left; width: 100%">
-          <h6 style="margin-top: 20px; margin-bottom: 0px">Tingkatan</h6>
-          <div style="margin-top: 10px">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox7" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox7">Paud</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox8">TK</label>
-            </div> 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox8">SD</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox8">SMP</label>
-            </div> 
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
-              <label class="custom-control-label" for="customCheckbox8">SMA</label>
-            </div> 
-          </div>
-
-        </div>
-
-        <div style="width: 100%; float: left">
-          <h6 style="margin-top: 20px; margin-bottom: 0px">Perkiraan Gaji</h6>
-          <div style="margin-top: 10px">
-           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0" style="float: left; width: 40%">
-
-           <hr style="width: 2%; float: left; margin: 20px; color: black">
-
-           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0" style="float: left; width: 40%">
-         </div>
-       </div>
-
-     </div>
-   </div>
-
-
-   <div style="width: 63%; height: 650px; float: right">
+<div class="detail" style="width: 100%; height: 650px; padding: 0px 70px; background-color: #F0F0F0;">
+  <div class="" style="width: 35%; height: 650px; float: left">
     <div class="shadow-sm mb-5 bg-white rounded" style="margin: 50px 0px; height: 550px; padding: 25px">
-      <h2 id="usernameHere"></h2>
 
+      <h5>Filter Lowongan</h5>
+      <hr>
+      <h6>Bidang Pendidikan yang Diajar</h6>
+      <div style="margin-top: 10px">
+        <div style="width: 50%; float: left">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox1" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox1">Bahasa Inggris</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox2" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox2">Bahasa Indonesia </label>
+          </div> 
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox3" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox3">Matematika</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox4" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox4">Fisika </label>
+          </div> 
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox5" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox5">Biologi</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox6" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox6">Kimia </label>
+          </div> 
+        </div>
+
+        <div style="width: 40%; float: left">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox7" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox7">Sosiologi</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox8">Geografi </label>
+          </div> 
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox9" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio9">Ekonomi</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox10" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox10">Sejarah</label>
+          </div> 
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox11" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox11">Musik</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox12" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox12">Olahraga</label>
+          </div>    
+        </div>
+      </div>
+
+
+      <div style="float: left; width: 100%">
+        <h6 style="margin-top: 20px; margin-bottom: 0px">Tingkatan</h6>
+        <div style="margin-top: 10px">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox7" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox7">Paud</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox8">TK</label>
+          </div> 
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox8">SD</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox8">SMP</label>
+          </div> 
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="customCheckbox8" name="customCheckbox" class="custom-control-input">
+            <label class="custom-control-label" for="customCheckbox8">SMA</label>
+          </div> 
+        </div>
+
+      </div>
+
+      <div style="width: 100%; float: left">
+        <h6 style="margin-top: 20px; margin-bottom: 0px">Perkiraan Gaji</h6>
+        <div style="margin-top: 10px">
+         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0" style="float: left; width: 40%">
+
+         <hr style="width: 2%; float: left; margin: 20px; color: black">
+
+         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0" style="float: left; width: 40%">
+       </div>
+     </div>
+
+   </div>
+ </div>
+ <div class="" style="width: 60%; height: 650px; float: right;" ng-app="projectList" ng-controller="pList">
+  <div class="shadow-sm mb-5 bg-white rounded" style="/*margin: 50px 0px;*/ height: 550px; padding: 25px">
+
+    <h5>Daftar Lowongan</h5>
+    <hr>
+    <div>
+      <ng-view></ng-view>
     </div>
   </div>
+</div>
+
 </div>
 
 <footer>
@@ -188,40 +231,57 @@ nav li{
         <p class="card-text"><a href="#">Berkarir bersama kami</a></p>
         <p class="card-text"><a href="#">Hubungi kami</a></p>
 
-        <h5 class="card-title" style="margin-top: 40px;">API</h5>
-        <p class="card-text"><a href="#">MAP</a></p>
-        <p class="card-text"><a href="#">Freelancer</a></p>
-        <p class="card-text"><a href="#">JoobStreet</a></p>
+         <!--  <h5 class="card-title" style="margin-top: 40px;">API</h5>
+          <p class="card-text"><a href="#">MAP</a></p>
+          <p class="card-text"><a href="#">Freelancer</a></p>
+          <p class="card-text"><a href="#">JoobStreet</a></p> -->
 
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Pencari kerja</h5>
-        <p class="card-text"><a href="#">Menjadi guru</a></p>
-        <p class="card-text"><a href="#">Panduan mencari guru les</a></p>
-        <p class="card-text"><a href="#">Panduan kebijakan privasi</a></p>
-        <p class="card-text"><a href="#">Berkerja sama secara aman</a></p>
-        <p class="card-text"><a href="#">Pusat pengembangan karir</a></p>
-        <p class="card-text"><a href="#">Bantuan</a></p>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Pencari kerja</h5>
+          <p class="card-text"><a href="#">Menjadi guru</a></p>
+          <p class="card-text"><a href="#">Panduan mencari guru les</a></p>
+          <p class="card-text"><a href="#">Panduan kebijakan privasi</a></p>
+          <p class="card-text"><a href="#">Berkerja sama secara aman</a></p>
+          <p class="card-text"><a href="#">Pusat pengembangan karir</a></p>
+          <p class="card-text"><a href="#">Bantuan</a></p>
+        </div>
       </div>
-    </div>
-    <div class="card" >
-      <div class="card-body">
-        <h5 class="card-title">Media Sosial</h5>
-        <img src="img/fb.png">
-        <img src="img/g+.png">
-        <img src="img/email.png">
-        <img src="img/ig.png">
-        <img src="img/sp.svg">
-        <h2 id="apaGituNama"></h2>
-        <h2 id="apaGituAddress"></h2>
+      <div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">Media Sosial</h5>
+          <img src="img/fb.png">
+          <img src="img/g+.png">
+          <img src="img/email.png">
+          <img src="img/ig.png">
+          <img src="img/sp.svg">
 
-        <h5 class="card-title" style="margin-top: 40px;">Lokasi Kantor Pusat</h5>
-        <img>
+          <h5 class="card-title" style="margin-top: 40px;">Lokasi Kantor Pusat</h5>
+          <div id="mapdetail"></div>
+          <script>
+            function initMap() {
+              var loc = {lat: -7.756414, lng:110.406653};
+              var map = new google.maps.Map(document.getElementById('mapdetail'), {
+                zoom: 17,
+                center: loc
+              });
+              var marker = new google.maps.Marker({
+                position: loc,
+                map: map,
+                label:'Kantor Pusat GuruLes'
+
+              });
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYTyY2QP4RTUvQpOkBso9Qs8wX3d1Swkg&callback=initMap">
+        </script>
       </div>
     </div>
   </div>
+
   <hr style="background: white; width: 25%; margin:">
   <p style="color: white; text-align: center; font-size: 13px; margin: 0px">Hak Cipta 2018 <img src="img/cr.svg" style="height: 10px;"> GuruLes.co.id</p>
 </footer>
@@ -235,7 +295,7 @@ nav li{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <!-- Database -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   var database= firebase.database();
   var starCountRef = firebase.database().ref('/lowongan');
   var namalah 
@@ -248,5 +308,6 @@ nav li{
     console.log(allName);
   });
 </script>
+-->
 </body>
 </html>

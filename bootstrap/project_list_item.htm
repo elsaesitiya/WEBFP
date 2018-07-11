@@ -1,0 +1,40 @@
+<section ng-repeat="x in datas">
+	<section ng-if="$even">
+		<div class="row" style="background-color: #F3F3F3;padding-top: 20px;padding-right: 20px">
+			<!-- Grid column -->
+			<div class="col-4">
+
+				<img id="myImg1" src="img/tutor.jpg" class="img-fluid z-depth-3 img-thumbnail" alt="Responsive image"/>
+			</div>
+			<div class="col-6">
+				<h4><b>{{x.name}}</b></h4>
+				<p style="font-size: 10px">{{x.description}}</p>
+				<p>Duration: {{x.duration}}</p>
+				<p>Rp {{x.sallary}}</p>
+			</div>
+			<div class="col-2" style="padding-top: 5%">
+				<button class="btn mr-auto" style="background-color: orangered; color: white;"><b>Ambil</b></button>
+			</div>
+		</div>
+	</section>
+	<section ng-if="$odd">
+		<div class="row" style="background-color: #F0F0F0;padding-top: 20px;padding-right: 20px">
+			<!-- Grid column -->
+			<div class="col-4">
+
+				<img id="myImg1" src="img/tutor.jpg" class="img-fluid z-depth-3 img-thumbnail" alt="Responsive image"/>
+
+			</div>
+			<div class="col-6">
+				<h4><b>{{x.name}}</b></h4>
+				<p style="font-size: 10px">{{x.description}}</p>
+				<p>Duration: {{x.duration}}</p>
+				<p>Rp {{x.sallary}}</p>
+			</div>
+			<div class="col-2" style="padding-top: 5%">
+				<button class="btn mr-auto" style="background-color: orangered; color: white;"><b>Ambil</b></button>
+			</div>
+		</div>
+	</section>
+
+</section>
