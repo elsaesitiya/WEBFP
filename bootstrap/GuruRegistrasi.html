@@ -1,62 +1,64 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <!-- Jquery for form validation -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <title>Registrasi</title>
-</head>
-<body class="text-center" style="background: #F0F0F0;">
-  <div class="from-login shadow p-5 mb- bg-white rounded">
-    <img src="img/fl.png" style="width: 200px; padding: 10px; margin-bottom: 20px;">
-    <ul class="nav nav-tabs" >
-      <li class="nav-item" style="width: 50%">
-        <a class="nav-link " href="GuruLogin.html">Masuk</a>
-      </li>
-      <li class="nav-item" style="width: 50%">
-        <a class="nav-link active" href="#" style="font-size: 20px">Regristrasi</a>
-      </li>
-    </ul>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>RegristrasiGuru</title>
+  </head>
+  <body class="text-center" style="background: #F0F0F0;">
+      <div class="from-login shadow p-5 mb- bg-white rounded">
+        <img src="img/fl.png" style="width: 200px; padding: 10px; margin-bottom: 20px;">
+        <ul class="nav nav-tabs" >
+          <li class="nav-item" style="width: 50%">
+            <a class="nav-link " href="GuruLogin.html">Masuk</a>
+          </li>
+          <li class="nav-item" style="width: 50%">
+            <a class="nav-link active" href="#" style="font-size: 20px">Regristrasi</a>
+          </li>
+        </ul>
+        
+        <div class="account" style="width: 100%; margin: 40px 0px 10px">
+            <button type="button" class="btn btn-secondary" style="width: 40%; margin-right: 5px; background-color: #475993; border: none">Facebook</button>
+            <button type="button" class="btn btn-secondary" style="width: 40%; margin-left: 5px; background-color: #DC4E41; border: none">Google</button>  
+        </div>
+                    <p style="padding: 20px; margin: 0px; font-size: 15px"><b>ATAU</b></p>
 
-    <div class="account" style="width: 100%; margin: 40px 0px 10px">
-      <button type="button" class="btn btn-secondary" style="width: 40%; margin-right: 5px; background-color: #475993; border: none">Facebook</button>
-      <button type="button" class="btn btn-secondary" style="width: 40%; margin-left: 5px; background-color: #DC4E41; border: none">Google</button>  
-    </div>
-    <p style="padding: 20px; margin: 0px; font-size: 15px"><b>ATAU</b></p>
+          
+        <form class="GuruLogin" style=" margin: 0px 0px 40px;">
+            <input type="Text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Depan"   style="width:350px; margin-bottom: 20px;">
+            
+            <input type="Text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Belakang"   style="width:350px; margin-bottom: 20px;">
+            
+            <input type="Text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Pengguna"   style="width:350px; margin-bottom: 20px;">
 
+            <input type="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" style="width:350px; margin-bottom: 20px;">
+            
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Kata Sandi" style="width: 350px;">
 
-    <form class="GuruLogin" action="TypeAccount.html" id="registrationForm" name="registration" style=" margin: 0px 0px 40px;">
-      <input type="Text" name="namaDepan" class="form-control inputRegistrasi" id="exampleInputEmail1" placeholder="Nama Depan">
+            
+            
+            <button type="submit" class="btn btn-primary" style="margin: 20px 0px 0px 0px; width: 350px; height: 50px;"><b>Regristrasi</b></button>
+         
+        </form>
+          
+          
+        
+              
+        <hr>
+         
+        <p style="font-size: 13px">Dengan mendaftar, Anda menkonfirmasi bahwa Anda menerima  <a href="#">Syarat dan Kondisi </a> dan<a href="#"> Kebijakan Privasi</a></p>
 
-      <input type="Text" name="namaBelakang" class="form-control inputRegistrasi" placeholder="Nama Belakang">
+      </div>
 
-      <input type="Text" name="username" class="form-control inputRegistrasi" placeholder="Nama Pengguna">
-
-      <input type="Email" name="emailRegistration" class="form-control inputRegistrasi" placeholder="Email">
-
-      <input type="password" name="password" class="form-control inputRegistrasi" placeholder="Kata Sandi">
-
-      <button type="submit" class="btn btn-primary btn-registration"><b>Regristrasi</b></button>
-
-    </form>
-    <hr>
-    <p style="font-size: 13px">Dengan mendaftar, Anda menkonfirmasi bahwa Anda menerima  <a href="#">Syarat dan Kondisi </a> dan<a href="#"> Kebijakan Privasi</a></p>
-
-  </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-  <script src="js/form-validation.js"></script>
-
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
 </html>
